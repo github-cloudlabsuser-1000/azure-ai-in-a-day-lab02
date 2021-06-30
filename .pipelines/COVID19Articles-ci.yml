@@ -36,7 +36,7 @@ stages:
     - template: code-quality-template.yml
     - task: AzureCLI@1
       inputs:
-        azureSubscription: '$(WORKSPACE_SVC_CONNECTION)'
+        azureSubscription: 'aml-workspace-connection'
         scriptLocation: inlineScript
         workingDirectory: $(Build.SourcesDirectory)
         inlineScript: |
@@ -60,7 +60,7 @@ stages:
     steps:
     - task: AzureCLI@1
       inputs:
-        azureSubscription: '$(WORKSPACE_SVC_CONNECTION)'
+        azureSubscription: 'aml-workspace-connection'
         scriptLocation: inlineScript
         workingDirectory: $(Build.SourcesDirectory)
         inlineScript: |
