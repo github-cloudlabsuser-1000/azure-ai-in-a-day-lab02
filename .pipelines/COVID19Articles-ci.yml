@@ -83,7 +83,7 @@ stages:
     - task: ms-air-aiagility.vss-services-azureml.azureml-restApi-task.MLPublishedPipelineRestAPITask@0
       displayName: 'Invoke ML pipeline'
       inputs:
-        azureSubscription: '$(WORKSPACE_SVC_CONNECTION)'
+        azureSubscription: 'aml-workspace-connection'
         PipelineId: '$(AMLPIPELINE_ID)'
         ExperimentName: '$(EXPERIMENT_NAME)'
         PipelineParameters: '"ParameterAssignments": {"model_name": "$(MODEL_NAME)"}, "tags": {"BuildId": "$(Build.BuildId)", "BuildUri": "$(BUILD_URI)"}, "StepTags": {"BuildId": "$(Build.BuildId)", "BuildUri": "$(BUILD_URI)"}'
